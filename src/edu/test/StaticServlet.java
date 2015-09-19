@@ -1,6 +1,8 @@
 package edu.test;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -26,6 +28,18 @@ public class StaticServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		System.out.println("PRint something");
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		out.println("<HTML>");
+		out.println("<BODY>");
+		out.println("<HEAD>");
+		out.println("<TITLE>Static Servlet</TITLE>");
+		out.println("</HEAD>");
+		out.println("<body>");
+		out.println("<CENTER><H1>Hello, World</H1></CENTER>");
+		out.println("</BODY>");
+		out.println("</HTML>");
 	}
 
 	/**
